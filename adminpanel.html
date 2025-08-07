@@ -1,0 +1,71 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Ajay Rathod</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Sidebar -->
+    <div class="flex min-h-screen">
+      <aside class="w-64 bg-gray-800 shadow-lg">
+        <div class="p-6 text-2xl font-bold text-cyan-400">Admin Panel</div>
+        <nav class="mt-6 flex flex-col space-y-4 text-lg px-4">
+          <a href="#" class="hover:text-cyan-400 transition">Dashboard</a>
+          <a href="#" class="hover:text-cyan-400 transition">Projects</a>
+          <a href="#" class="hover:text-cyan-400 transition">Users</a>
+          <a href="#" class="hover:text-cyan-400 transition">Messages</a>
+          <a href="#" class="hover:text-cyan-400 transition">Settings</a>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="flex-1 p-8">
+        <h1 class="text-4xl font-bold mb-6 text-cyan-300">Welcome, Admin!</h1>
+
+        <!-- Stats Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+          <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-cyan-500/40 transition">
+            <h2 class="text-xl font-semibold text-cyan-400">Total Projects</h2>
+            <p class="text-3xl mt-2 font-bold text-white">12</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-cyan-500/40 transition">
+            <h2 class="text-xl font-semibold text-cyan-400">Messages</h2>
+            <p class="text-3xl mt-2 font-bold text-white">Live</p>
+          </div>
+          <div class="bg-gray-800 p-6 rounded-xl shadow hover:shadow-cyan-500/40 transition">
+            <h2 class="text-xl font-semibold text-cyan-400">Users</h2>
+            <p class="text-3xl mt-2 font-bold text-white">7</p>
+          </div>
+        </div>
+
+        <!-- Recent Messages Table -->
+        <div class="bg-gray-800 rounded-xl overflow-x-auto shadow">
+          <table class="w-full text-left text-gray-300">
+            <thead class="bg-gray-700 text-cyan-300">
+              <tr>
+                <th class="p-4">Name</th>
+                <th class="p-4">Email</th>
+                <th class="p-4">Message</th>
+              </tr>
+            </thead>
+            <tbody id="feedback-table-body">
+              <!-- Dynamic content here -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+    <!-- Add this inside <head> OR before </body> -->
+<script type="module" src="./admin.js"></script>
+<!-- Firebase App (core SDK) -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+<!-- Your custom admin script -->
+<script type="module" src="admin.js"></script>
+
+
+      </body>
+</html>
