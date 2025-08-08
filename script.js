@@ -1,11 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ✅ MENU TOGGLE
+ // ✅ MENU TOGGLE
   const menuBtn = document.getElementById("menu-btn");
-  const menu = document.getElementById("menu");
+const menu = document.getElementById("menu");
 
-  menuBtn?.addEventListener("click", () => {
-    menu?.classList.toggle("hidden");
+// Toggle menu on button click
+menuBtn?.addEventListener("click", () => {
+  menu?.classList.toggle("hidden");
+});
+
+// Close menu & scroll to section when a link is clicked
+const menuLinks = menu?.querySelectorAll("a");
+
+menuLinks?.forEach(link => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const targetId = link.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
+
+    // Smooth scroll
+    targetElement?.scrollIntoView({ behavior: "smooth" });
+
+    // Close menu
+    menu.classList.add("hidden");
   });
+});
 
   // ✅ TYPING ANIMATION
   const titles = [
