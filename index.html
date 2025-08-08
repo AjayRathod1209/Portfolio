@@ -243,7 +243,7 @@
   </div>
 </section>
 
-<!-- Certificates Section -->
+
 <!-- Certificates Section -->
 <section id="certificates" class="bg-black py-16 px-4 text-white">
   <div class="text-center mb-12">
@@ -253,8 +253,9 @@
   </div>
 
   <div class="flex justify-center">
-    <div class="swiper-container w-full md:w-[80%] lg:w-[60%] bg-gray-900 p-4 md:p-6 rounded-2xl shadow-xl overflow-hidden">
+    <div class="swiper-container w-full md:w-[80%] lg:w-[60%] bg-gray-900 p-4 md:p-6 rounded-2xl shadow-xl relative overflow-hidden mx-auto">
       <div class="swiper-wrapper">
+        <!-- Certificate Slides -->
         <div class="swiper-slide flex items-center justify-center">
           <img src="google clooud _page-0001.jpg" alt="Certificate 1" 
                class="rounded-xl object-contain max-w-full h-auto py-4 mx-auto" />
@@ -263,11 +264,23 @@
           <img src="solution challange_page-0001.jpg" alt="Certificate 2" 
                class="rounded-xl object-contain max-w-full h-auto py-4 mx-auto" />
         </div>
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="google clooud _page-0001.jpg" alt="Certificate 3" 
+               class="rounded-xl object-contain max-w-full h-auto py-4 mx-auto" />
+        </div>
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="solution challange_page-0001.jpg" alt="Certificate 4" 
+               class="rounded-xl object-contain max-w-full h-auto py-4 mx-auto" />
+        </div>
+        <div class="swiper-slide flex items-center justify-center">
+          <img src="google clooud _page-0001.jpg" alt="Certificate 5" 
+               class="rounded-xl object-contain max-w-full h-auto py-4 mx-auto" />
+        </div>
       </div>
 
-      <!-- Navigation -->
-      <div class="swiper-button-prev !text-cyan-400 hover:scale-110 transition"></div>
-      <div class="swiper-button-next !text-cyan-400 hover:scale-110 transition"></div>
+      <!-- Navigation Buttons -->
+      <div class="swiper-button-prev !text-cyan-400 !left-3 md:!left-5 hover:scale-110 transition"></div>
+      <div class="swiper-button-next !text-cyan-400 !right-3 md:!right-5 hover:scale-110 transition"></div>
 
       <!-- Pagination -->
       <div class="swiper-pagination !bottom-3"></div>
@@ -275,30 +288,6 @@
   </div>
 </section>
 
-<!-- Swiper Initialization Script -->
-<script>
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    centeredSlides: true,
-    loop: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    breakpoints: {
-      768: { // Tablet/Desktop
-        slidesPerView: 1,
-        spaceBetween: 0,
-        centeredSlides: true
-      }
-    }
-  });
-</script>
 
 
 <!-- Contact section-->
